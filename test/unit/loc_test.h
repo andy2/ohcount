@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../../src/loc.h"
+#include <ohcount/loc.h>
 
 void test_loc_default() {
   Loc *loc = ohcount_loc_new("c", 0, 0, 0, 0);

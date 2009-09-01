@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_TCL_PARSER_H
 #define OHCOUNT_TCL_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *TCL_LANG = LANG_TCL;

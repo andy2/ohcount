@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_EBUILD_PARSER_H
 #define OHCOUNT_EBUILD_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *EBUILD_LANG = LANG_EBUILD;

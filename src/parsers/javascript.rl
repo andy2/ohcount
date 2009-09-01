@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_JAVASCRIPT_PARSER_H
 #define OHCOUNT_JAVASCRIPT_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *JS_LANG = LANG_JAVASCRIPT;

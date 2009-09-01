@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_GROOVY_PARSER_H
 #define OHCOUNT_GROOVY_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *GROOVY_LANG = LANG_GROOVY;

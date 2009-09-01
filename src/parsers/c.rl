@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_C_PARSER_H
 #define OHCOUNT_C_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *C_LANG = LANG_C;

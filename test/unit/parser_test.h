@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../../src/sourcefile.h"
+#include <ohcount/sourcefile.h>
 
 SourceFile *test_parser_sourcefile(const char *language, const char *contents) {
   SourceFile *sf = ohcount_sourcefile_new("foo");

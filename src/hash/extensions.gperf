@@ -1,5 +1,5 @@
 %{
-#include "../languages.h"
+#include <ohcount/languages.h>
 
 #define BINARY "\1"
 #define DISAMBIGUATE(x) ("\2" x)

@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_JSP_PARSER_H
 #define OHCOUNT_JSP_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *JSP_LANG = LANG_HTML;

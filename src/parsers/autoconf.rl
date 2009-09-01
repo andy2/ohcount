@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_AUTOCONF_PARSER_H
 #define OHCOUNT_AUTOCONF_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *AC_LANG = LANG_AUTOCONF;

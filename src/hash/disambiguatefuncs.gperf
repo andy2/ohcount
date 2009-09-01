@@ -1,6 +1,6 @@
 %{
-#include "../detector.h"
-#include "../sourcefile.h"
+#include <ohcount/detector.h>
+#include <ohcount/sourcefile.h>
 
 const char *disambiguate_aspx(SourceFile *sourcefile);
 const char *disambiguate_b(SourceFile *sourcefile);

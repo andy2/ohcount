@@ -2,7 +2,7 @@
 #ifndef OHCOUNT_CS_ASPX_PARSER_H
 #define OHCOUNT_CS_ASPX_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *CS_ASPX_LANG = LANG_HTML;

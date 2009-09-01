@@ -5,9 +5,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../../src/detector.h"
-#include "../../src/languages.h"
-#include "../../src/sourcefile.h"
+#include <ohcount/detector.h>
+#include <ohcount/languages.h>
+#include <ohcount/sourcefile.h>
 
 #define ASSERT_DETECT(x, y) { \
   SourceFile *sf = ohcount_sourcefile_new("../detect_files/" y); \

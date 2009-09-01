@@ -2,7 +2,7 @@
 #ifndef OHCOUNT_XAML_PARSER_H
 #define OHCOUNT_XAML_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *XAML_LANG = LANG_XAML;

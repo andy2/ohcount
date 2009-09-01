@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_PERL_PARSER_H
 #define OHCOUNT_PERL_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *PERL_LANG = LANG_PERL;

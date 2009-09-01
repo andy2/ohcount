@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_EXHERES_PARSER_H
 #define OHCOUNT_EXHERES_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *EXHERES_LANG = LANG_EXHERES;

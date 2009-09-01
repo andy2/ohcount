@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_HASKELL_PARSER_H
 #define OHCOUNT_HASKELL_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *HASKELL_LANG = LANG_HASKELL;

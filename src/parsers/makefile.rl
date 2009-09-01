@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_MAKEFILE_PARSER_H
 #define OHCOUNT_MAKEFILE_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *MAKE_LANG = LANG_MAKE;

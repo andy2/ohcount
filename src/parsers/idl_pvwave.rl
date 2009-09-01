@@ -5,7 +5,7 @@
 #ifndef RAGEL_IDL_PVWAVE_PARSER
 #define RAGEL_IDL_PVWAVE_PARSER
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *IDL_PVWAVE_LANG = "idl_pvwave";

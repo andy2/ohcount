@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_FORTRANFIXED_PARSER_H
 #define OHCOUNT_FORTRANFIXED_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *FORTRANFIXED_LANG = LANG_FORTRANFIXED;

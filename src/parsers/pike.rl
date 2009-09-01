@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_PIKE_PARSER_H
 #define OHCOUNT_PIKE_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *PIKE_LANG = LANG_PIKE;

@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_DYLAN_PARSER_H
 #define OHCOUNT_DYLAN_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *DYLAN_LANG = LANG_DYLAN;

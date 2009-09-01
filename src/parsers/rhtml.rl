@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_RHTML_PARSER_H
 #define OHCOUNT_RHTML_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *RHTML_LANG = LANG_HTML;

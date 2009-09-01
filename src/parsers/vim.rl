@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_VIM_PARSER_H
 #define OHCOUNT_VIM_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *VIM_LANG = LANG_VIM;

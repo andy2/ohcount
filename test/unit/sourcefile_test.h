@@ -4,9 +4,9 @@
 #include <string.h>
 #include <assert.h>
 
-#include "../../src/sourcefile.h"
-#include "../../src/diff.h"
-#include "../../src/loc.h"
+#include <ohcount/sourcefile.h>
+#include <ohcount/diff.h>
+#include <ohcount/loc.h>
 
 void test_sourcefile_initialize() {
   SourceFile *sf = ohcount_sourcefile_new("foo.rb");

@@ -1,5 +1,5 @@
 %{
-#include "../ohcount.h"
+#include <ohcount/ohcount.h>
 %}
 struct OhcountOption { const char *key; int value; };
 %%

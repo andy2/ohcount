@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_HAXE_PARSER_H
 #define OHCOUNT_HAXE_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *HX_LANG = LANG_HAXE;

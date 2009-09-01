@@ -9,7 +9,7 @@
 #ifndef RAGEL_CMAKE_PARSER
 #define RAGEL_CMAKE_PARSER
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *CMAKE_LANG = "cmake";

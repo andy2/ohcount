@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_D_PARSER_H
 #define OHCOUNT_D_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *D_LANG = LANG_DMD;

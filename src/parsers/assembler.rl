@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_ASM_PARSER_H
 #define OHCOUNT_ASM_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *ASM_LANG = LANG_ASSEMBLER;

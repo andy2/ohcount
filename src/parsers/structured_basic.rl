@@ -2,7 +2,7 @@
 #ifndef OHCOUNT_STRUCTURED_BASIC_PARSER_H
 #define OHCOUNT_STRUCTURED_BASIC_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *SB_LANG = LANG_STRUCTURED_BASIC;

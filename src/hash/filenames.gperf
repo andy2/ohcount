@@ -1,5 +1,5 @@
 %{
-#include "../languages.h"
+#include <ohcount/languages.h>
 %}
 struct FilenameMap { const char *key; const char *value; };
 %%

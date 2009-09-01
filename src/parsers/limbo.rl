@@ -5,7 +5,7 @@
 #ifndef RAGEL_LIMBO_PARSER
 #define RAGEL_LIMBO_PARSER
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *LIMBO_LANG = "limbo";

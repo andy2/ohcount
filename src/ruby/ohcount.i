@@ -1,9 +1,9 @@
 
 %module ohcount
 %{
-#include "../src/detector.h"
-#include "../src/languages.h"
-#include "../src/sourcefile.h"
+#include <ohcount/detector.h>
+#include <ohcount/languages.h>
+#include <ohcount/sourcefile.h>
 %}
 
 %include typemaps.i
@@ -24,8 +24,8 @@
 
 %nodefaultctor SourceFile;
 %immutable;
-%include "../src/languages.h"
-%include "../src/structs.h"
+%include <ohcount/languages.h>
+%include <ohcount/structs.h>
 %mutable;
 
 %extend SourceFile {

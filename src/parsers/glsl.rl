@@ -6,7 +6,7 @@
 #ifndef OHCOUNT_GLSL_PARSER_H
 #define OHCOUNT_GLSL_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *GLSL_LANG = LANG_GLSL;

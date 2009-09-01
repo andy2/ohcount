@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "../../src/licenses.h"
+#include <ohcount/licenses.h>
 
 void all_license_tests() {
   const char *src_licenses = "../src_licenses/";

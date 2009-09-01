@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_FORTRANFREE_PARSER_H
 #define OHCOUNT_FORTRANFREE_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *FORTRANFREE_LANG = LANG_FORTRANFREE;

@@ -4,7 +4,7 @@
 #ifndef RAGEL_SCILAB_PARSER
 #define RAGEL_SCILAB_PARSER
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *SCILAB_LANG = "scilab";

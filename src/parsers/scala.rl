@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_SCALA_PARSER_H
 #define OHCOUNT_SCALA_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *SCALA_LANG = LANG_SCALA;

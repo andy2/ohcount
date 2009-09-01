@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_TEX_PARSER_H
 #define OHCOUNT_TEX_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *TEX_LANG = LANG_TEX;

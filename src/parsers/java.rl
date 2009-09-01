@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_JAVA_PARSER_H
 #define OHCOUNT_JAVA_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *JAVA_LANG = LANG_JAVA;

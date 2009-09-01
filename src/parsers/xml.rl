@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_XML_PARSER_H
 #define OHCOUNT_XML_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *XML_LANG = LANG_XML;

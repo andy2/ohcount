@@ -4,7 +4,7 @@
 #ifndef OHCOUNT_RUBY_PARSER_H
 #define OHCOUNT_RUBY_PARSER_H
 
-#include "../parser_macros.h"
+#include <parser_macros.h>
 
 // the name of the language
 const char *RUBY_LANG = LANG_RUBY;
