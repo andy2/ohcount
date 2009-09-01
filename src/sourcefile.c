@@ -13,6 +13,15 @@
 #include "parser.h"
 #include "log.h"
 
+#ifdef __CYGWIN__
+#include <sys/stat.h>
+#ifndef DT_UNKNOWN
+#define DT_UNKNOWN 0
+#define DT_DIR 4
+#define DT_REG 8
+#endif
+#endif
+
 // SourceFile
 
 SourceFile *ohcount_sourcefile_new(const char *filepath) {
@@ -431,9 +440,27 @@ void ohcount_sourcefile_list_add_directory(SourceFileList *list,
       strncpy(f_p, (const char *)file->d_name, length);
       *(f_p + length) = '\0';
 
-      if (file->d_type == DT_DIR && *file->d_name != '.') // no hidden dirs
+      unsigned char d_type = DT_UNKNOWN;
+
+      #ifdef __CYGWIN__
+      struct stat buffer;
+      if (stat(filepath, &buffer) == -1) {
+         fprintf(stderr, "error stat %s\n", filepath);
+         exit(-1);
+      }
+      if ((buffer.st_mode & _IFMT) == _IFDIR) {
+        d_type = DT_DIR;
+      }
+      if ((buffer.st_mode & _IFMT) == _IFREG) {
+        d_type = DT_REG;
+      }
+      #else
+      d_type = file->d_type;
+      #endif
+
+      if (*file->d_name != '.' && d_type == DT_DIR) // no hidden dirs
         ohcount_sourcefile_list_add_directory(list, filepath);
-      else if (file->d_type == DT_REG)
+      else if (d_type == DT_REG)
         ohcount_sourcefile_list_add_file(list, filepath);
     }
     closedir(d);

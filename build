@@ -4,7 +4,23 @@
 
 # Options
 # Change these for your system configuration.
-if [ `uname` != "Darwin" ]
+
+# detect Cygwin
+cygwin=false;
+case "`uname`" in
+  CYGWIN*) cygwin=true;
+esac
+
+if $cygwin; 
+then
+  # Cygwin
+  CFLAGS="-fno-common -O3"
+  WARN="-Wall -Wno-parentheses"
+  SHARED="-dynamiclib -L$LIB_DIR -lpcre"
+  SHARED_NAME=libohcount.dll.a
+  RB_SHARED="-dynamic -bundle -lruby"
+  RB_SHARED_NAME=ohcount.bundle
+elif [ `uname` != "Darwin" ]
 then
   # Linux
   INC_DIR=
@@ -108,12 +124,17 @@ build_ruby_bindings()
 {
 	arch=`ruby -rmkmf -e 'print Config::expand(CONFIG["arch"])'`
 	echo "Generating Ruby bindings for $arch"
-	sh -c "swig -ruby -o ruby/ohcount_wrap.c ruby/ohcount.i" || exit 1
+	swig -ruby -o ruby/ohcount_wrap.c ruby/ohcount.i
+    if [ "$?" -ne 0 ]; then exit 1; fi
+
 	mkdir -p ruby/$arch
-  sh -c "$cc $RB_SHARED ruby/ohcount_wrap.c $files -o ruby/$arch/$RB_SHARED_NAME \
+    echo $cc $RB_SHARED ruby/ohcount_wrap.c $files -o ruby/$arch/$RB_SHARED_NAME \
     -I`ruby -rmkmf -e 'print Config::expand(CONFIG["archdir"])'` \
-    -lpcre" || exit 1
-  sh -c "cd test/unit/ruby && ruby ruby_test.rb" || exit 1
+    -lpcre
+    if [ "$?" -ne 0 ]; then exit 1; fi
+
+    cd test/unit/ruby && ruby ruby_test.rb
+    if [ "$?" -ne 0 ]; then exit 1; fi
 }
 
 if [ $# -eq 0 ] || [ $1 == "all" ]

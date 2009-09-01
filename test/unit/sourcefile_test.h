@@ -127,10 +127,12 @@ void test_sourcefile_diff_longer() {
 }
 
 void test_sourcefile_diff_very_long() {
-	char a[5500000];
-	memset(a, 'i', sizeof(a));
-	a[sizeof(a)] = '\0';
-	a[sizeof(a)-1] = '\n';
+    #define VERYLONG 5500000
+	char *a;
+    a = malloc(VERYLONG);
+	memset(a, 'i', VERYLONG);
+	a[VERYLONG-1] = '\0';
+	a[VERYLONG-2] = '\n';
 
   SourceFile *old = ohcount_sourcefile_new("foo.c");
   ohcount_sourcefile_set_contents(old, a);
@@ -147,6 +149,8 @@ void test_sourcefile_diff_very_long() {
   ohcount_sourcefile_free(new);
   ohcount_loc_delta_list_free(list);
   ohcount_loc_delta_free(delta1);
+
+  free(a);
 }
 
 void test_sourcefile_calc_diff() {
