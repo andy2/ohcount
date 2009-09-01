@@ -1,4 +1,6 @@
 AC_INIT([ohcount], [3.0], [support@ohloh.net])
+
+AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE
 
 # arguments
