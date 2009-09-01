@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Compiles all .rl files for Ohcount.
 # Written by Mitchell Foral. mitchell<att>caladbolg<dott>net.
 

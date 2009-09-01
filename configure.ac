@@ -1,8 +1,5 @@
-AC_CONFIG_MACRO_DIR([m4])
-
 AC_INIT([ohcount], [3.0], [support@ohloh.net])
 AM_INIT_AUTOMAKE
-AM_SILENT_RULES([no])
 
 # arguments
 
@@ -14,7 +11,7 @@ AC_ARG_WITH(ruby,
 # programs
 
 AC_PROG_CC
-LT_INIT
+AC_PROG_LIBTOOL
 
 AC_CHECK_PROG(GPERF, gperf, gperf)
 AS_IF([test -z "$GPERF"], [AC_MSG_ERROR([gperf is required to build the parsers])])
