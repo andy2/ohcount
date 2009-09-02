@@ -15,6 +15,14 @@ AC_ARG_WITH(ruby,
 AC_PROG_CC
 AC_PROG_LIBTOOL
 
+AC_HEADER_STDC
+
+AC_CHECK_HEADER(pcre.h, , [
+   AC_MSG_ERROR([header pcre.h not found - install package libpcre-dev])
+])
+
+AC_CHECK_HEADERS_ONCE([pcrexx.h])
+
 AC_CHECK_PROG(GPERF, gperf, gperf)
 AS_IF([test -z "$GPERF"], [AC_MSG_ERROR([gperf is required to build the parsers])])
 
@@ -47,14 +55,9 @@ AC_CONFIG_FILES([
     src/parsers/Makefile
     src/ohcount/Makefile
     test/unit/Makefile
-])
-
-if test "$with_ruby" != "no"; then
-AC_CONFIG_FILES([
     src/ruby/Makefile
     test/unit/ruby/Makefile
 ])
-fi
 
 AC_OUTPUT
 
