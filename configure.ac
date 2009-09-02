@@ -14,6 +14,8 @@ AC_ARG_WITH(ruby,
 
 AC_PROG_CC
 AC_PROG_LIBTOOL
+LT_PREREQ([2.2.6])
+LT_INIT([disable-static])
 
 AC_HEADER_STDC
 
