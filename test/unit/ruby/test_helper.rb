@@ -1,8 +1,8 @@
 require 'test/unit'
 require 'fileutils'
 require 'find'
-require File.dirname(__FILE__) + '/../../../ruby/ohcount.rb' # .rb is to specify the .rb instead of .bundle
-require File.dirname(__FILE__) + '/../../../ruby/gestalt' # .rb is to specify the .rb instead of .bundle
+require File.dirname(__FILE__) + '/../../../src/ruby/ohcount.rb' # .rb is to specify the .rb instead of .bundle
+require File.dirname(__FILE__) + '/../../../src/ruby/gestalt' # .rb is to specify the .rb instead of .bundle
 
 unless defined?(TEST_DIR)
 	TEST_DIR = File.dirname(__FILE__)

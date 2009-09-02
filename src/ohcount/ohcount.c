@@ -5,9 +5,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "hash/option_hash.h"
-#include "sourcefile.h"
-#include "ohcount.h"
+#include <hash/option_hash.h>
+#include <ohcount/sourcefile.h>
+#include <ohcount/ohcount.h>
 
 void annotate_callback(const char *language, const char *entity, int start,
                        int end, void *userdata) {

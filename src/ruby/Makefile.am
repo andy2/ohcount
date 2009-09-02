@@ -1,4 +1,4 @@
-INCLUDES = -I$(top_srcdir)/src -I$(RUBY_INC)
+INCLUDES = -I$(top_srcdir)/src -I$(top_srcdir)/src/ohcount -I$(RUBY_INC)
 AM_LDFLAGS = -no-undefined -lpcre -lruby
 
 all: ohcount.c
@@ -6,12 +6,12 @@ all: ohcount.c
 ohcount.c : ohcount.i
 	swig -I$(top_srcdir)/src -ruby -o ohcount.c ohcount.i
 
-lib_LTLIBRARIES = libohcount.la
+lib_LTLIBRARIES = libohcount_ruby.la
 
 # static library ../ohcount/liboh.a has all this stuff built;
-# beats me how to trick libtool to use a static library!
+# beats me how to trick libtool into using a static library!
 
-libohcount_la_SOURCES = ohcount.c   \
+libohcount_ruby_la_SOURCES = ohcount.c   \
 ../ohcount/detector.c               \
 ../ohcount/diff.c                   \
 ../ohcount/licenses.c               \

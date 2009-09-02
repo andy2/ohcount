@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "loc.h"
+#include <ohcount/loc.h>
 
 // Loc
 

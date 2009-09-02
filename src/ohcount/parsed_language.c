@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "parsed_language.h"
+#include <ohcount/parsed_language.h>
 
 ParsedLanguage *ohcount_parsed_language_new(const char *name,
                                             int buffer_size) {

@@ -7,14 +7,14 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "detector.h"
-#include "languages.h"
-#include "log.h"
+#include <ohcount/detector.h>
+#include <ohcount/languages.h>
+#include <ohcount/log.h>
 
-#include "hash/cppheader_hash.h"
-#include "hash/disambiguatefunc_hash.h"
-#include "hash/extension_hash.h"
-#include "hash/filename_hash.h"
+#include <hash/cppheader_hash.h>
+#include <hash/disambiguatefunc_hash.h>
+#include <hash/extension_hash.h>
+#include <hash/filename_hash.h>
 
 #define ISBINARY(x) (x[0] == '\1')
 #define ISAMBIGUOUS(x) (x[0] == '\2')

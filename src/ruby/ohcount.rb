@@ -5,11 +5,11 @@
 $: << File.expand_path(File.dirname(__FILE__))
 
 begin
-	require 'ohcount.so'
+	require 'libohcount_ruby'
 rescue LoadError
 	require 'rbconfig'
 	include Config
-	require "#{Config::CONFIG['arch']}/ohcount.so"
+	require "#{Config::CONFIG['arch']}/libohcount_ruby"
 end
 
 module Ohcount

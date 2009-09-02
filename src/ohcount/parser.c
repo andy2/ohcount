@@ -3,9 +3,9 @@
 
 #include <string.h>
 
-#include "sourcefile.h"
-#include "log.h"
-#include "hash/parser_hash.h"
+#include <ohcount/sourcefile.h>
+#include <ohcount/log.h>
+#include <hash/parser_hash.h>
 
 int ohcount_parse(SourceFile *sourcefile, int count,
                   void (*callback) (const char *, const char *, int, int,

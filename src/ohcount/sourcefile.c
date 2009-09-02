@@ -6,12 +6,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "detector.h"
-#include "diff.h"
-#include "languages.h"
-#include "licenses.h"
-#include "parser.h"
-#include "log.h"
+#include <ohcount/detector.h>
+#include <ohcount/diff.h>
+#include <ohcount/languages.h>
+#include <ohcount/licenses.h>
+#include <ohcount/parser.h>
+#include <ohcount/log.h>
 
 #ifdef __CYGWIN__
 #include <sys/stat.h>

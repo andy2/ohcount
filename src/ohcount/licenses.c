@@ -4,8 +4,8 @@
 #include <ctype.h>
 #include <string.h>
 
-#include "licenses.h"
-#include "parser.h"
+#include <ohcount/licenses.h>
+#include <ohcount/parser.h>
 
 // Holds licenses and their associated details and patterns.
 License license_map[] = {
