@@ -10930,7 +10930,7 @@ CC="$lt_save_CC"
 
 
 
-
+#LT_INIT([disable-static])
 
 { echo "$as_me:$LINENO: checking for ANSI C header files" >&5
 echo $ECHO_N "checking for ANSI C header files... $ECHO_C" >&6; }
