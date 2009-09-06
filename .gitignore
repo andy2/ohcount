@@ -16,8 +16,18 @@ ruby/ohcount_wrap.c
 test/unit/run_tests.dSYM/
 
 .deps/
+configure
 Makefile
+Makefile.in
 autom4te.cache/
 config.log
 config.status
-
+config.guess
+config.sub
+libtool
+ltmain.sh
+aclocal.m4
+depcomp
+install-sh
+missing
+m4/

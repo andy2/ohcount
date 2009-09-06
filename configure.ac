@@ -14,16 +14,13 @@ AC_ARG_WITH(ruby,
 
 AC_PROG_CC
 AC_PROG_LIBTOOL
-LT_PREREQ([2.2.6])
-#LT_INIT([disable-static])
+LT_INIT([disable-static])
 
 AC_HEADER_STDC
 
 AC_CHECK_HEADER(pcre.h, , [
    AC_MSG_ERROR([header pcre.h not found - install package libpcre-dev])
 ])
-
-AC_CHECK_HEADERS_ONCE([pcrexx.h])
 
 AC_CHECK_PROG(GPERF, gperf, gperf)
 AS_IF([test -z "$GPERF"], [AC_MSG_ERROR([gperf is required to build the parsers])])
@@ -62,4 +59,3 @@ AC_CONFIG_FILES([
 ])
 
 AC_OUTPUT
-
