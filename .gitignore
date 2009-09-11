@@ -30,4 +30,5 @@ aclocal.m4
 depcomp
 install-sh
 missing
-m4/
+m4/*
+!m4/ax_pkg_swig.m4

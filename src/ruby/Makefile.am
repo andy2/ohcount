@@ -3,8 +3,8 @@ AM_LDFLAGS = -no-undefined -lpcre -lruby
 
 all: ohcount.c
 
-ohcount.c : ohcount.i
-	swig -I$(top_srcdir)/src -ruby -o ohcount.c ohcount.i
+ohcount.c : ../swig/ohcount.i
+	swig -I$(top_srcdir)/src -ruby -o ohcount.c ../swig/ohcount.i
 
 lib_LTLIBRARIES = libohcount_ruby.la
 

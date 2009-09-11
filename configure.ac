@@ -1,7 +1,11 @@
-AC_INIT([ohcount], [3.0], [support@ohloh.net])
+AC_INIT(ohcount, 3.0, [support@ohloh.net])
 
 AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE
+
+AM_PATH_PYTHON(2.5)
+AC_PROG_SWIG(1.3.21)
+AX_SWIG_PYTHON
 
 # arguments
 
@@ -9,6 +13,11 @@ AC_ARG_WITH(ruby,
   AC_HELP_STRING([--with-ruby], [enable Ruby bindings]),
   [],
   [with_ruby=no])
+
+AC_ARG_WITH(python,
+  AC_HELP_STRING([--with-python], [enable Python bindings]),
+  [],
+  [with_python=no])
 
 # programs
 
@@ -45,6 +54,18 @@ if test "$with_ruby" != "no"; then
     AC_SUBST(RUBY_SUBDIRS)
 fi
 
+if test "$with_python" != "no"; then
+    AC_CHECK_PROG(PYTHON, python, python)
+    AS_IF([test -z "$PYTHON"], [AC_MSG_ERROR([python is required to build python bindings])])
+
+    AC_CHECK_PROG(SWIG, swig, swig)
+    AS_IF([test -z "$SWIG"], [AC_MSG_ERROR([swig is required to build python bindings])])
+
+    PYTHON_SUBDIRS="src/python test/unit/python"
+    AC_SUBST(PYTHON_SUBDIRS)
+fi
+
+
 # config
 
 AC_CONFIG_FILES([
@@ -56,6 +77,8 @@ AC_CONFIG_FILES([
     test/unit/Makefile
     src/ruby/Makefile
     test/unit/ruby/Makefile
+    src/python/Makefile
+    test/unit/python/Makefile
 ])
 
 AC_OUTPUT
