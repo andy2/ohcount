@@ -2,14 +2,13 @@
 # See COPYING for license information.
 # Ohcount module tweaked for use by Ohloh.
 
-$: << File.expand_path(File.dirname(__FILE__))
-
 begin
 	require 'libohcount_ruby'
 rescue LoadError
 	require 'rbconfig'
-	include Config
-	require "#{Config::CONFIG['arch']}/libohcount_ruby"
+	#include Config
+	#require "#{Config::CONFIG['arch']}/libohcount_ruby"
+	require File.expand_path(File.dirname(__FILE__)) + "/libs/libohcount_ruby"
 end
 
 module Ohcount
